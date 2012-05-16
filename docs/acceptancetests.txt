@@ -1,0 +1,65 @@
+Upfront mxitup
+~~~~~~~~~~~~~~
+
+Goal
+~~~~
+
+    Add a persistent mxit chatroom to piece of plone content.
+
+
+Tecnical design
+~~~~~~~~~~~~~~~
+
+    New product called upfront.mxitup via zopeskel (dexterity template).
+
+    New behavior mxit.chatroom.
+
+
+Acceptance tests
+~~~~~~~~~~~~~~~~
+
+Prerequisites
+
+    A registered mxit application that points to the plone instance you will be using in the tests that follow.
+    I am using: m.qa.everythingmaths.co.za (it points to qa.everythingmaths.co.za)
+
+Steps
+
+    Navigate to the plone control panel.
+
+    Verify that the configlet 'MxitUp Settings' is available.
+
+    Click on the configlet link.
+
+    Verify that the settings 'client id' and 'client secret' are visible.
+
+    Enter your the following in the provided fields:
+
+        Client Id: 5801b949d2a4407fbaaefd071ee968da
+        Client Secret: 97e5aba9450d4fe6bb269f5b60d9482f
+    
+    Hit the 'save' button.
+
+    Create a new plone folder.
+
+    Navigate to the settings tab.
+
+    Verify that the option 'Add mxit chatroom' is available.
+
+    Click in the checkbox next to 'Add mxit chatroom'.
+
+    Hit the 'save' button.
+
+    On a mobile device, open the mxit application.
+
+    Add m.qa.everythingmaths.co.za as a contact.
+
+    Select the newly added contact.
+
+    Navigate to the folder you added above. Note the folder title.
+
+    Verify that a link titled 'Join chat' is visible.
+
+    Click on the link titled 'Join chat'.
+
+    Verify that you are taken to a chat room with the same title as that of the folder you were viewing.
