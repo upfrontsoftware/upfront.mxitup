@@ -28,7 +28,7 @@
   <!-- -*- extra stuff goes here -*- -->
   <plone:behavior
       title="Add mxit chatroom"
-      description="Add a mxit chatroom on dexterity content."
+      description="Add a mxit chatroom to dexterity content."
       provides=".behaviors.mxit_chatroom.IMxitChatroom"
       for="plone.dexterity.interfaces.IDexterityContent"
       />
