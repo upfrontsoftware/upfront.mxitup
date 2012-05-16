@@ -1,0 +1,6 @@
+Version 0.1dev (unreleased)
+===========================
+    
+    Product added.
+
+    Basic behavior skeleton created.
