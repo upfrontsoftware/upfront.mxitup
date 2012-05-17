@@ -27,7 +27,6 @@ setup(name='upfront.mxitup',
       install_requires=[
           'setuptools',
           'plone.app.dexterity',
-          'plone.app.registry',
           'collective.autopermission',
           'plone.behavior',
           'plone.directives.form',

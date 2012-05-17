@@ -10,6 +10,8 @@
   <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
 
+  <include package=".extenders" />
+
   <!-- Grok the package to initialise schema interfaces and content classes -->
   <grok:grok package="." />
   
@@ -28,7 +30,7 @@
   <!-- -*- extra stuff goes here -*- -->
   <plone:behavior
       title="Add mxit chatroom"
-      description="Add a mxit chatroom on dexterity content."
+      description="Add a mxit chatroom to this content."
       provides=".behaviors.mxit_chatroom.IMxitChatroom"
       for="plone.dexterity.interfaces.IDexterityContent"
       />
