@@ -1,0 +1,30 @@
+<!--
+From the mxit document:
+http://code.mxit.com/Documentation/Mobiportal/RTFM.aspx#services
+
+The format for MXit redirects are:
+
+mxit://[target:option;option]/parameters 
+
+Option	Description
+Refresh	Send the request to the target service without adding it to the history stack
+Root	Send the request to the target service and make this the new root of the history stack
+Data	Send the request to the target service and store the data in the history cache for when the session is restored with the back command
+TempContact=	This is added after any of the other options seperated by a comma seperator. This instructs the proxy to create a temporary contact for the redirect. You may define a alias or not which the proxy will use the default alias for that service. This opens the contact in a new tab. e.g. mxit://[myservicename:TempContact=]/
+
+HTML link for Mobi API 
+
+An example of the link to another service is:
+
+<a href="mxit://[ServiceName]/" type="mxit/service-navigation">Go to Service</a> 
+
+Note the type attribute of the tag this marks this link as a service redirect. Replace “ServiceName” with the name of the service you want to redirect to. eg.:
+<a href="mxit://[tradepost]/" type="mxit/service-navigation">Go to Tradepost</a>
+-->
+
+<tal:mxit-chatroom-link omit-tag="" condition="viewlet/can_show">
+<a href="mxit://[ServiceName]/" type="mxit/service-navigation"
+    tal:attributes="href string:mxit://${viewlet/chatroom}/">
+    <span tal:replace="string:Go to chatroom:${viewlet/chatroom}">Go to chatroom</span>
+</a> 
+</tal:mxit-chatroom-link>
